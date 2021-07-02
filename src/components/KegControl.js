@@ -1,4 +1,7 @@
 import React from "react";
+import NewKegForm from "./NewKegForm.js";
+import KegList from "./KegList.js";
+import KegDetail from "./KegDetail";
 
 class KegControl extends React.Component {
   constructor (props) {
@@ -23,6 +26,28 @@ handleClick = () => {
     }));
   }
 };
+
+handleAddingNewKegToList = (newKeg) => {
+  const newMasterKegList = this.state.masterKegList.concat(newKeg);
+  this.setState({
+    masterKegList: newMasterKegList,
+    formVisibleOnPage: false,
+  });
+};
+
+handleChangingSelectedKeg = (id) => {
+  const selectedKeg = this.state.masterKegList.filter((keg) => keg.id === id)[0];
+  this.setState({selectedKeg: selectedKeg});
+};
+
+handleDeletingKeg = (id) => {
+  const newMasterKegList = this.state.masterKegList.filter((keg) => keg.id !== id);
+  this.setState({
+    masterKegList: newMasterKegList,
+    selectedKeg: null});
+};
+
+
 
   render() {
     let currentlyVisibleState = null;
