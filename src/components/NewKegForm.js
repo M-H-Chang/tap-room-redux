@@ -1,6 +1,6 @@
 import React from "react";
 import { v4 } from "uuid";
-import ReusableForm from "./ResuableForm";
+import ReusableForm from "./ReusableForm";
 import PropTypes from "prop-types";
 
 function NewKegForm(props){
