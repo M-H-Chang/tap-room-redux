@@ -20,7 +20,7 @@ Keg.propTypes = {
   brand: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   amount: PropTypes.string.isRequired,
-  alcoholContent: PropTypes.number.isRequired,
+  alcoholContent: PropTypes.string.isRequired,
   whenKegClicked: PropTypes.func
 }
 export default Keg;

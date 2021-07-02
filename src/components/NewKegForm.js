@@ -7,11 +7,19 @@ function NewKegForm(props){
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
     props.onNewKegCreation({
-      name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, amount: event.target.amount.value, alcoholContent: event.target.alcoholContent.value, id: v4()
+      name: event.target.name.value, 
+      brand: event.target.brand.value, 
+      price: event.target.price.value, 
+      amount: event.target.amount.value, 
+      alcoholContent: event.target.alcoholContent.value, 
+      id: v4()
     })
   }
 
 
+  NewKegForm.propTypes = {
+    onNewItemCreation: PropTypes.func
+  }
 
   return(
     <React.Fragment>
@@ -24,8 +32,5 @@ function NewKegForm(props){
   )
 }
 
-NewKegForm.propTypes = {
-  onNewItemCreation: PropTypes.func
-}
 
 export default NewKegForm;
