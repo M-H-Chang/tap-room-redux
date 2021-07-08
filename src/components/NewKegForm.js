@@ -1,7 +1,7 @@
 import React from "react";
 import { v4 } from "uuid";
-import ReusableForm from "./ReusableForm";
 import PropTypes from "prop-types";
+import ReusableForm from "./ReusableForm";
 
 function NewKegForm(props){
   function handleNewKegFormSubmission(event) {
@@ -10,8 +10,7 @@ function NewKegForm(props){
       name: event.target.name.value, 
       brand: event.target.brand.value, 
       price: event.target.price.value, 
-      amount: event.target.amount.value, 
-      alcoholContent: event.target.alcoholContent.value, 
+      alcoholContent: event.target.alcoholContent.value,
       id: v4()
     })
   }

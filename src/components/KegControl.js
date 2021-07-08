@@ -1,8 +1,8 @@
 import React from "react";
 import NewKegForm from "./NewKegForm.js";
 import KegList from "./KegList.js";
-import KegDetail from "./KegDetail";
-import EditKegForm from "./EditKegForm";
+import KegDetail from "./KegDetail.js";
+import EditKegForm from "./EditKegForm.js";
 
 class KegControl extends React.Component {
   constructor (props) {
@@ -23,7 +23,7 @@ handleClick = () => {
     });
   } else {
     this.setState((prevState) => ({
-      formVisibleOnPage: !prevState.formVisibleonPage,
+      formVisibleOnPage: !prevState.formVisibleOnPage,
     }));
   }
 };
@@ -37,8 +37,10 @@ handleAddingNewKegToList = (newKeg) => {
 };
 
 handleChangingSelectedKeg = (id) => {
-  const selectedKeg = this.state.masterKegList.filter((keg) => keg.id === id)[0];
-  this.setState({selectedKeg: selectedKeg});
+  const selectedKeg = this.state.masterKegList.filter(
+    (keg) => keg.id === id
+    )[0];
+  this.setState({ selectedKeg: selectedKeg });
 };
 
 handleDeletingKeg = (id) => {
@@ -69,7 +71,7 @@ handleEditingKegInList = (kegToEdit) => {
       currentlyVisibleState = (
         <EditKegForm
         keg={this.state.selectedKeg}
-        onEditItem={this.handleEditingKegInList}
+        onEditKeg={this.handleEditingKegInList}
         />
       );
       buttonText = "Return to Keg List";

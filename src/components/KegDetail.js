@@ -1,25 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Keg from "./Keg";
 
-function KegDetails(props) {
+function KegDetail(props) {
   const { keg, onClickingDelete } = props;
   return (
-    <React.FragMent>
+    <React.Fragment>
       <h2>{keg.name}</h2>
       <p>{keg.brand}</p>
       <p>{keg.price}</p>
       <p>{keg.alcoholContent}</p>
-      <p>{keg.amount}</p>
-      <button onClick={props.onClickingDelete(keg.id)}>Delete Keg</button>
-    </React.FragMent>
+      <button onClick={props.onClickingEdit}>Update Keg</button>
+      <button onClick={() => onClickingDelete(keg.id)}>Delete Keg</button>
+    </React.Fragment>
   )
 }
 
-KegDetails.propTypes = {
+KegDetail.propTypes = {
   keg: PropTypes.object,
   onClickingDelete: PropTypes.func,
   onClickingEdit: PropTypes.func
 };
 
-export default KegDetails;
+export default KegDetail;
