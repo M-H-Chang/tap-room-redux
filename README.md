@@ -74,3 +74,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ###Description
 _This application lets you add beverages from the tap to the list to edit, add, and delete each drink that you add letting users create an application full of different types of drinks._
+
+## Tech Used
+1. JavaScript
+2. React.js
+3. JSX
+4. Jest
+
+## Requierments
+- JavaScript
+- React Library
+
+## Setup Instructions
+1. Clone down repository to destinated local directory
+2. Open cloned directory 
+3. `npm run start` to see live changes
+
+### Known Bugs
+- None Identified
+
+### License
+- GPL 3.0 or later
+
+### Contact Information
+- Min Chang: minchangmhc at gmail dot com
