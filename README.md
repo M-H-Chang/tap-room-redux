@@ -73,17 +73,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # Tap Room
 
 ###Description
-_This application lets you add beverages from the tap to the list to edit, add, and delete each drink that you add letting users create an application full of different types of drinks._
+_This application is a copy from the repository `https://github.com/M-H-Chang/tap-room` and was refactored to use redux._
 
 ## Tech Used
 1. JavaScript
 2. React.js
 3. JSX
 4. Jest
+5. Redux
 
 ## Requierments
 - JavaScript
 - React Library
+- Redux
 
 ## Setup Instructions
 1. Clone down repository to destinated local directory
