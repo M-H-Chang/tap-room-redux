@@ -29,4 +29,18 @@ describe('drinkListReducer', () => {
     })
   })
   let action;
+
+  const drinkData = {
+    names: 'IPA',
+    brand: 'Bud Light',
+    price: '4.99',
+    alcoholContent: '4%',
+    id: 1
+  }
+
+  test('Should return default state if there is no action type passed into the reducer', () => {
+    expect(drinkListReducer({}, { type: null })).toEqual({});
+  });
+  
+
 })

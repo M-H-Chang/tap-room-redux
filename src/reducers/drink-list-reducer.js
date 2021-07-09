@@ -1,7 +1,7 @@
 import * as c from './../actions/ActionTypes';
 
-export default (state = {}, action =>{
-  const { names, brand, price, alcoholContent, id} = action;
+export default (state = {}, action) =>{
+  const { names, brand, price, alcoholContent, id } = action;
   switch(action.type) {
     case c.ADD_DRINK:
     return Object.assign({}, state, {
@@ -17,5 +17,6 @@ export default (state = {}, action =>{
       let newState = { ...state };
       delete newState[id];
       return newState;
+
   }
-})
+}
