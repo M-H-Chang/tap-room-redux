@@ -3,6 +3,9 @@ import NewKegForm from "./NewKegForm.js";
 import KegList from "./KegList.js";
 import KegDetail from "./KegDetail.js";
 import EditKegForm from "./EditKegForm.js";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import * as c from "./../actions";
 
 class KegControl extends React.Component {
   constructor (props) {
@@ -98,8 +101,6 @@ handleEditingKegInList = (kegToEdit) => {
       );
       buttonText = "Add Keg";
     }
-
-
     return (
       <React.Fragment>
         {currentlyVisibleState}
@@ -107,7 +108,16 @@ handleEditingKegInList = (kegToEdit) => {
       </React.Fragment>
     )
   }
-
 }
-
+const mapStateToProps = state => {
+  return {
+    masterKegList: state.masterKegList,
+    formVisibleOnPage: state.formVisibleOnPage
+  }
+}
+KegControl.propTypes = {
+  masterKegList: PropTypes.object,
+  formVisibleOnPage: PropTypes.bool
+}
+KegControl = connect(mapStateToProps)(KegControl)
 export default KegControl;
