@@ -72,6 +72,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # Tap Room
 
+### Diagram
+![Tap Diagram](https://user-images.githubusercontent.com/75760190/125145102-fac78380-e0d4-11eb-8f8a-768e01723912.png)
+
 ###Description
 _This application is a copy from the repository `https://github.com/M-H-Chang/tap-room` and was refactored to use redux._
 
