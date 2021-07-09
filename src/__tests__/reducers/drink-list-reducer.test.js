@@ -14,6 +14,9 @@ describe('drinkListReducer', () => {
     alcoholContent: '3%',
     id: 2}
   }
+  test('Should return default state if there is no action type passed into the reducer', () => {
+    expect(drinkListReducer({}, { type: null })).toEqual({});
+  });
 
   test('Should successfully delete a drink', () => {
     action = {
@@ -38,9 +41,6 @@ describe('drinkListReducer', () => {
     id: 1
   }
 
-  test('Should return default state if there is no action type passed into the reducer', () => {
-    expect(drinkListReducer({}, { type: null })).toEqual({});
-  });
   
 
 })
